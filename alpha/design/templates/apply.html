@@ -1,0 +1,46 @@
+{% load static %}
+{% block body %}
+
+{% include 'base.html' %}
+
+<section id="apply">
+    <style>
+        #apply {
+            background-color: blue;
+            margin-left: 24rem;
+            margin-right: 24rem;
+            margin-bottom: 10rem;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+
+        }
+        .form-apply {
+            text-align: center;
+            margin: 20%;
+            padding: 2rem;
+            }
+        .form-apply h3 {
+            padding: 1rem;
+        }
+        #apply button{
+            padding: 0.3rem;
+            background-color: green;
+        }
+    </style>
+    <div>
+    <form class="form-apply" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <h3>APPLY FORM</h3>
+           {{form.as_p}}
+        <button type="apply">Apply</button>
+    </form>
+    </div>
+
+</section>
+
+{% endblock %}
+
+

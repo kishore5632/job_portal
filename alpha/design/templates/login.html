@@ -1,0 +1,26 @@
+{% load static %}
+{% block body %}
+
+{% include 'base.html' %}
+
+<section id="login">
+    <div>
+        <header class="title">
+            <h2>Login Form</h2>
+        </header>
+    <form class="form-wrappers" method="POST">
+        {% csrf_token %}
+    
+        <label for="username">username:</label>
+        <input type="text" name="username" required><br><br>
+        <label for="password">Password :</label>
+        <input type="password" name="password" required><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</section>
+
+{% endblock %}
+
+

@@ -1,0 +1,69 @@
+{% load static %}
+{% block body %}
+
+{% include 'base.html' %}
+
+<section id="joblist"> 
+    <h3>LIST OF JOBS</h3>
+  
+    {% for job in jobs %}
+    <style>
+        #joblist {
+            margin-left: 24rem;
+            margin-right: 24rem;
+            margin-bottom: 10rem;
+
+
+            }
+        .card {
+            background-color: blue;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+           }
+        .card-body h3{         
+           text-align: center;
+           margin-top: 3rem;
+          }
+        .card-body p{         
+            text-align: center;
+            padding-top: 5%;
+            }
+       #joblist {
+           text-align: center;
+       }
+
+       #joblist h3 {
+        margin: 2rem;
+      
+       }
+
+       .main-button {
+           text-align: center;
+           margin: 2rem;
+           padding: 0.5rem;
+           background-color: green;
+       }
+    </style>
+   
+    <div class="card">
+        <div class="card-body">
+            <h3>Company: {{ job.company }}</h3>
+            <p>Job Title : {{ job.jobtitle }}</p>
+            <p>Skills : {{ job.skills }}</p>
+            <p>Vaccancy : {{ job.vaccancy }}</p>
+            <button class="main-button"><a href="{% url 'apply' %}">Apply</a></button>
+        </div>
+      
+
+    </div>
+    
+    {% endfor %}
+
+</section>
+
+{% endblock %}
+
+
+

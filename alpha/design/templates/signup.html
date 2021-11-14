@@ -1,0 +1,36 @@
+{% load static %}
+{% block body %}
+
+{% include 'base.html' %}
+
+<section id="signup">
+    <div>
+        <header class="head">
+            <h2>Signup Form</h2>
+        </header>
+    
+
+    <form class="main-form" method="POST">
+        {% csrf_token %}
+
+        <label for="firstname">FirstName:</label>
+        <input type="text" name="firstname" required><br><br>
+        <label for="lastname">LastName:</label>
+        <input type="text" name="lastname" required><br><br>
+        <label for="username">UserName:</label>
+        <input type="text" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br><br>
+        <label for="confirm_password">confirm password:</label>
+        <input type="password" name="confirm_password" required><br><br>
+        <label for="email">Email id:</label>
+        <input type="email" name="email" required><br><br>
+        <label for="contact">Contact:</label>
+        <input type="text" name="contact" required><br><br>
+        
+        <button type="register">Register</button>
+    </form>
+    </div>
+</section>
+
+{% endblock %}
