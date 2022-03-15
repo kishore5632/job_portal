@@ -71,6 +71,6 @@ def apply(request):
     context = {'form':form}
     return render(request,'apply.html',context)
 
-#just for  jenkins webhook
+#just for  jenkins webhooks testing
 
 
