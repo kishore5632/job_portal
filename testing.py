@@ -1,1 +1,1 @@
-Testing the webhook for automation.
+Testing the webhook for automations.
