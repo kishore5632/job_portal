@@ -19,4 +19,4 @@ class Apply(models.Model):
     document = models.FileField(upload_to='media/documents', null=True, blank=True)
 
     
-    # checking webhook for auto commits.
+    # checking webhook for auto commits for jenkins.
